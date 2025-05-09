@@ -2,3 +2,190 @@
 title: Hong Kong Supermarket
 layout: default
 ---
+
+<section class="hero">
+    <div class="hero-left">
+        <h1> Hong Kong Supermarket </h1>
+        <p> Your one-stop shop for authentic Asian groceries, produce, and hard-to-find ingredients. </p>
+        <p> Located in Winterville, North Carolina. </p>
+        <a href="#map"> 
+            <button> Get Directions </button>
+        </a>
+    </div>
+    <div class="hero-right">
+        <img
+            src="./images/favicon/android-chrome-512x512.png"
+            alt="Hong Kong Supermarket building"
+            width="auto"
+            height="480px"
+            object-fit="cover"
+        />
+    </div>
+</section>
+<section class="map" id="map">
+    <h2> Visit Us </h2>
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3550.673988734067!2d-77.40153435106002!3d35.54553890092228!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89aec342959437a5%3A0xc82fc68ed1592290!2sHong%20Kong%20Supermarket!5e1!3m2!1sen!2sus!4v1746666282808!5m2!1sen!2sus"
+        width="800px"
+        height="450px"
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"
+    >
+    </iframe>
+    <p> 154 Beacon Drive #A, Winterville, NC 28590 </p>
+</section>
+<section class="products">
+    <h2> Popular Products </h2>
+    <div class="product-group">
+        <div class="product">
+            <img src="./images/favicon/android-chrome-512x512.png" alt="product 1" height="370"/>
+            <p> Product description </p>
+            <p> <strong> Price </strong> </p>
+        </div>
+        <div class="product">
+            <img src="./images/favicon/android-chrome-512x512.png" alt="product 2" height="370"/>
+            <p> Product description </p>
+            <p> <strong> Price </strong> </p>
+        </div>
+        <div class="product">
+            <img src="./images/favicon/android-chrome-512x512.png" alt="product 3" height="370"/>
+            <p> Product description </p>
+            <p> <strong> Price </strong> </p>
+        </div>
+    </div>
+</section>
+<section class="faq">
+    <h2> Frequently Asked Questions (FAQ)</h2>
+    <p> Q: <i> "Where are you located?" </i> </p>
+    <p> A: Our address is 154 Beacon Drive #A, Winterville, NC 28590. </p>
+    <p> Q: <i> "Do you accept SNAP/EBT cards?" </i> </p>
+    <p> A: Yes, we do accept SNAP/EBT cards. </p>
+</section>
+
+<style>
+
+    .hero {
+        width: 100%;
+        padding-top: 10px;
+        background-color: #9C8B7E;
+        margin-bottom: 40px;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .hero-left {
+        flex: 1;
+    }
+
+    .hero-left h1 {
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+
+    .hero-left p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero a button { /* 'Get Directions' button */
+        width: 150px;
+        background-color: #555;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .hero a button:hover {
+        background-color: #D5D2CD;
+        color: #555;
+    }
+
+    .hero-right {
+        flex: 1;
+        text-align: center;
+    }
+
+    .map,
+    .products,
+    .faq {
+        text-align: center;
+        background-color: #9C8B7E;
+        padding: 10px;
+        margin-bottom: 40px;
+    }
+
+    iframe {
+        padding: 1rem;
+    }
+
+    .map p {
+        -webkit-user-select: text; /* Safari */
+        -ms-user-select: text; /* IE 10 and IE 11 */
+        user-select: text; /* Standard syntax */
+    }
+
+    .products {
+        padding: 2rem;
+    }
+
+    .products h2 {
+        margin-bottom: 2rem;
+    }
+
+    .product-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .product {
+        flex: 1 1 250px;
+        max-width: 370px;
+        padding: 1rem;
+        transition: transform 0.3s ease;
+
+        background-color: #555;
+        border-radius: 15px;
+    }
+
+    .product:hover {
+        transform: translateY(-5px);
+    }
+
+    .product img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .product p {
+        color: white;
+        margin: 0.5rem 0;
+    }
+
+    @media screen and (max-width: 868px) {
+        iframe {
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 1068px) {
+        .hero {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+</style>

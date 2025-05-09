@@ -3,72 +3,86 @@ title: About Hong Kong Supermarket
 layout: default
 ---
 
-<h1> Visit Us </h1>
-<iframe 
-    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3550.673988734067!2d-77.40153435106002!3d35.54553890092228!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89aec342959437a5%3A0xc82fc68ed1592290!2sHong%20Kong%20Supermarket!5e1!3m2!1sen!2sus!4v1746666282808!5m2!1sen!2sus"
-    width="800px"
-    height="450px"
-    style="border:0;" 
-    allowfullscreen="" 
-    loading="lazy" 
-    referrerpolicy="no-referrer-when-downgrade"
->
-</iframe>
-<p> 154 Beacon Drive #A, Winterville, NC 28590</p>
-<br>
-<h1> Contact Us </h1>
-<form action="https://formspree.io/f/xldbnzno" method="POST">
-    <label>
-        Name:
-        <p><input type="text" name="name" placeholder="Enter your name" required></p>
-    </label>
-    <br>
-    <label>
-        Email:
-        <p><input type="email" name="email" placeholder="Enter your email" required></p>
-    </label>
-    <br>
-    <label>
-        Message:
-        <p><textarea name="message" placeholder="Enter your message" required></textarea></p>
-    </label>
-    <br>
-  <!-- your other form fields go here -->
-    <button type="submit">Send</button>
-  </form>
-  <br>
-  <br>
+<section class="map">
+    <h1> Visit Us </h1>
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3550.673988734067!2d-77.40153435106002!3d35.54553890092228!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89aec342959437a5%3A0xc82fc68ed1592290!2sHong%20Kong%20Supermarket!5e1!3m2!1sen!2sus!4v1746666282808!5m2!1sen!2sus"
+        width="800px"
+        height="450px"
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"
+    >
+    </iframe>
+    <p> 154 Beacon Drive #A, Winterville, NC 28590 </p>
+</section>
+<section class="contact">
+    <h1> Contact Us </h1>
+    <form action="https://formspree.io/f/xldbnzno" method="POST">
+        <label>
+            Name:
+            <p><input type="text" name="name" placeholder="Enter your name" required></p>
+        </label>
+        <br>
+        <label>
+            Email:
+            <p><input type="email" name="email" placeholder="Enter your email" required></p>
+        </label>
+        <br>
+        <label>
+            Message:
+            <p><textarea name="message" placeholder="Enter your message" required></textarea></p>
+        </label>
+        <br>
+        <!-- your other form fields go here -->
+        <button type="submit">Send</button>
+    </form>
+</section>
 
 <style>
-    .article {
+
+    .map,
+    .contact {
         text-align: center;
+        background-color: #9C8B7E;
+        margin-bottom: 40px;
+        padding: 10px;
     }
 
-    p {
+    .contact {
+        padding-bottom: 2rem;
+    }
+
+    iframe {
+        padding: 1rem;
+    }
+
+    .map p {
         -webkit-user-select: text; /* Safari */
         -ms-user-select: text; /* IE 10 and IE 11 */
         user-select: text; /* Standard syntax */
     }
 
-    form {
+    .contact form {
         margin: 0 auto;
         max-width: 400px;
         padding: 20px;
-        border: 1px solid #9C8B7E;
+        border: 1px solid #555;
         border-radius: 15px;
         text-align: center;
     }
 
-    label {
+    .contact label {
         display: block;
         margin-bottom: 10px;
         font-weight: bold;
         color: #333;
     }
 
-    input[type="text"],
-    input[type="email"],
-    textarea {
+    .contact input[type="text"],
+    .contact input[type="email"],
+    .contact textarea {
         width: 100%;
         padding: 12px;
         border: 1px solid #ccc;
@@ -78,40 +92,41 @@ layout: default
         color: #555;
     }
 
-    textarea {
+    .contact textarea {
         height: 120px;
     }
 
-    button[type="submit"] {
+    .contact button[type="submit"] {
         background-color: #555;
         color: white;
         border: none;
         padding: 12px 20px;
         border-radius: 4px;
         cursor: pointer;
-        font-size: 16 px;
+        font-size: 16px;
         transition: background-color 0.3s ease;
     }
 
-    button[type="submit"]:hover {
-        background-color: #9C8B7E;
+    .contact button[type="submit"]:hover {
+        background-color: #D5D2CD;
+        color: #555;
     }
 
-    input[type="text"]:focus,
-    input[type="email"]:focus,
-    textarea:focus {
+    .contact input[type="text"]:focus,
+    .contact input[type="email"]:focus,
+    .contact textarea:focus {
         border-color: #555;
         outline: none;
     }
 
-    input[type="text"]::placeholder,
-    input[type="email"]::placeholder,
-    textarea::placeholder {
+    .contact input[type="text"]::placeholder,
+    .contact input[type="email"]::placeholder,
+    .contact textarea::placeholder {
         color: #999;
     }
 
     @media screen and (max-width: 868px) {
-        iframe {
+        .map iframe {
             width: 100%;
         }
     }

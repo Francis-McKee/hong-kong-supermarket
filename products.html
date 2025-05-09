@@ -2,3 +2,103 @@
 title: Products
 layout: default
 ---
+
+<section class="products">
+    <h2> Popular Products </h2>
+    <div class="product-group">
+        <div class="product">
+            <img src="./images/favicon/android-chrome-512x512.png" alt="product 1" height="370"/>
+            <p> Product description </p>
+            <p> <strong> Price </strong> </p>
+        </div>
+        <div class="product">
+            <img src="./images/favicon/android-chrome-512x512.png" alt="product 2" height="370"/>
+            <p> Product description </p>
+            <p> <strong> Price </strong> </p>
+        </div>
+        <div class="product">
+            <img src="./images/favicon/android-chrome-512x512.png" alt="product 3" height="370"/>
+            <p> Product description </p>
+            <p> <strong> Price </strong> </p>
+        </div>
+        <div class="product">
+            <img src="./images/favicon/android-chrome-512x512.png" alt="product 3" height="370"/>
+            <p> Product description </p>
+            <p> <strong> Price </strong> </p>
+        </div>
+        <div class="product">
+            <img src="./images/favicon/android-chrome-512x512.png" alt="product 3" height="370"/>
+            <p> Product description </p>
+            <p> <strong> Price </strong> </p>
+        </div>
+        <div class="product">
+            <img src="./images/favicon/android-chrome-512x512.png" alt="product 3" height="370"/>
+            <p> Product description </p>
+            <p> <strong> Price </strong> </p>
+        </div>
+        <div class="product">
+            <img src="./images/favicon/android-chrome-512x512.png" alt="product 3" height="370"/>
+            <p> Product description </p>
+            <p> <strong> Price </strong> </p>
+        </div>
+        <div class="product">
+            <img src="./images/favicon/android-chrome-512x512.png" alt="product 3" height="370"/>
+            <p> Product description </p>
+            <p> <strong> Price </strong> </p>
+        </div>
+        <div class="product">
+            <img src="./images/favicon/android-chrome-512x512.png" alt="product 3" height="370"/>
+            <p> Product description </p>
+            <p> <strong> Price </strong> </p>
+        </div>
+    </div>
+    <h2> And More! Come Give us a Visit! </h2>
+</section>
+
+<style>
+
+    .products {
+        padding: 2rem;
+        background-color: #9C8B7E;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .products h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .product-group {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        justify-items: center;
+    }
+
+    .product {
+        background-color: #555;
+        border-radius: 15px;
+        padding: 1rem;
+        max-width: 370px;
+        width: 100%;
+        transition: transform 0.2s ease;
+    }
+
+    .product:hover {
+        transform: scale(1.03);
+    }
+
+    .product img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+
+    .product p {
+        margin: 0.5rem 0;
+        color: white;
+    }
+
+</style>
