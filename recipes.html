@@ -2,3 +2,144 @@
 title: Recipes
 layout: default
 ---
+
+<section class="recipes">
+    <h2> Recipes </h2>
+    <div class="hidden">
+        <p> <a href="#"> Recipe 1 </a> </p>
+        <p> Recipe Description </p>
+        <p> <i class="fa-solid fa-utensils"></i> Breakfast </p>
+        <p> <i class="fa-solid fa-clock"></i> Time </p>
+        <p> <i class="fa-solid fa-person"></i> 1 </p>
+    </div>
+    <div class="hidden">
+        <p> <a href="#"> Recipe 2 </a> </p>
+        <p> Recipe Description </p>
+        <p> <i class="fa-solid fa-utensils"></i> Lunch </p>
+        <p> <i class="fa-solid fa-clock"></i> Time </p>
+        <p> <i class="fa-solid fa-person"></i> 2 </p>
+    </div>
+    <div class="hidden">
+        <p> <a href="#"> Recipe 3 </a> </p>
+        <p> Recipe Description </p>
+        <p> <i class="fa-solid fa-utensils"></i> Dinner </p>
+        <p> <i class="fa-solid fa-clock"></i> Time </p>
+        <p> <i class="fa-solid fa-person"></i> 3 </p>
+    </div>
+    <div class="hidden">
+        <p> <a href="#"> Recipe 4 </a> </p>
+        <p> Recipe Description </p>
+        <p> <i class="fa-solid fa-utensils"></i> Snack </p>
+        <p> <i class="fa-solid fa-clock"></i> Time </p>
+        <p> <i class="fa-solid fa-person"></i> 4 </p>
+    </div>
+    <div class="hidden">
+        <p> <a href="#"> Recipe 5 </a> </p>
+        <p> Recipe Description </p>
+        <p> <i class="fa-solid fa-utensils"></i> Breakfast </p>
+        <p> <i class="fa-solid fa-clock"></i> Time </p>
+        <p> <i class="fa-solid fa-person"></i> 5 </p>
+    </div>
+</section>
+
+<style>
+    
+    .recipes {
+        background-color: #9C8B7E;
+        margin-bottom: 40px;
+        text-align: center;
+        padding: 10px;
+        padding-bottom: 2rem;
+    }
+
+    .hidden {
+        display: grid;
+        place-items: center;
+        align-content: center;
+
+        margin: auto;
+        margin-top: 20px;
+        width: 60%;
+    
+        color: #555;
+        background-color: #D5D2CD;
+        border-radius: 15px;
+
+        box-shadow: 10px 10px 30px rgba(0,0,0,0.2);
+
+        transition: transform 0.3s ease;
+    }
+
+    .hidden:hover {
+        transform: scale(1.03);
+    }
+
+    .hidden p {
+        text-align: center;
+        width: 100%; /* set to fill 100% of container class block */
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .hidden a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #555;
+        color: white; /* without important links go invisible? */
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .hidden a:hover {
+        background-color: #9C8B7E;
+        color: white;
+    }
+
+    .hidden i {
+        font-size: 24px;
+    }
+
+    .hidden {
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateX(-100%);
+        transition: all 1s;
+    }
+
+    .show {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+    }
+
+    @media(prefers-reduced-motion: reduce) {
+        .hidden {
+            transition: none;
+        }
+    }
+
+    @media screen and (max-width: 768px) { /* mobile devices & tablets - screen width <= 768px */
+        section {
+            width: 80%;
+    }
+}
+
+</style>
+
+<script>
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry)
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } else {
+                entry.target.classList.remove('show');
+            }
+        });
+    });
+
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => observer.observe(el));
+
+</script>
