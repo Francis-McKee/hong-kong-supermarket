@@ -64,7 +64,7 @@
     <div class="hero-left">
         <h1> Hong Kong Supermarket </h1>
         <p> Your one-stop shop for authentic Asian groceries, produce, and hard-to-find ingredients. </p>
-        <p> Located in Winterville, North Carolina. </p>
+        <p> Located in Winterville, North Carolina. Open Sunday - Wednesday 10 AM to 7 PM & Friday - Saturday 10 AM to 8 PM. Closed Thursday. </p>
         <a href="#map"> 
             <button> Get Directions </button>
         </a>
@@ -93,6 +93,18 @@
     </iframe>
     <p> 154 Beacon Drive #A, Winterville, NC 28590 </p>
 </section>
+<section class="hours">
+    <h2> Store Hours </h2>
+    <ul>
+        <li> Sunday: 10 AM - 7 PM </li>
+        <li> Monday: 10 AM - 7 PM </li>
+        <li> Tuesday: 10 AM - 7 PM </li>
+        <li> Wednesday: 10 AM - 7 PM </li>
+        <li> <strong> Thursday: Closed </strong> </li>
+        <li> Friday: 10 AM - 8 PM </li>
+        <li> Saturday: 10 AM - 8 PM </li>
+    </ul>
+</section>
 <section class="products">
     <h2> Popular Products </h2>
     <div class="product-group">
@@ -112,6 +124,9 @@
             <p> <strong> Price </strong> </p>
         </div>
     </div>
+    <a href="./products.html">
+        <button> View More </button>
+    </a>
 </section>
 <section class="faq">
     <h2> Frequently Asked Questions (FAQ)</h2>
@@ -175,11 +190,12 @@
     }
 
     .map,
+    .hours,
     .products,
     .faq {
         text-align: center;
         background-color: #9C8B7E;
-        padding: 10px;
+        padding: 1rem;
         margin-bottom: 40px;
     }
 
@@ -191,6 +207,17 @@
         -webkit-user-select: text; /* Safari */
         -ms-user-select: text; /* IE 10 and IE 11 */
         user-select: text; /* Standard syntax */
+    }
+
+    .hours ul {
+        list-style: none;
+        padding: 1rem;
+        margin: 0 auto;
+    }
+
+    .hours li {
+        line-height: 2;
+        text-align: center;
     }
 
     .products {
@@ -233,6 +260,24 @@
         margin: 0.5rem 0;
     }
 
+    .products a button { /* 'View More' products button */
+        width: 150px;
+        background-color: #555;
+        color: white;
+        border: none;
+        margin: 1rem;
+        padding: 12px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .products a button:hover {
+        background-color: #D5D2CD;
+        color: #555;
+    }
+
     @media screen and (max-width: 868px) {
         iframe {
             width: 100%;
@@ -259,6 +304,7 @@
     </div>
     <div class="icons">
       <p>
+        <a href="https://g.co/kgs/6K2uRJ8" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-google fa-2xl"></i></a>
         <a href="https://www.tiktok.com/@hong.kong.superma" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok fa-2xl"></i></a>
         <a href="https://www.yelp.com/biz/hong-kong-supermarket-winterville" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-yelp fa-2xl"></i></a>
       </p>

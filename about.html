@@ -17,6 +17,18 @@ layout: default
     </iframe>
     <p> 154 Beacon Drive #A, Winterville, NC 28590 </p>
 </section>
+<section class="hours">
+    <h2> Store Hours </h2>
+    <ul>
+        <li> Sunday: 10 AM - 7 PM </li>
+        <li> Monday: 10 AM - 7 PM </li>
+        <li> Tuesday: 10 AM - 7 PM </li>
+        <li> Wednesday: 10 AM - 7 PM </li>
+        <li> <strong> Thursday: Closed </strong> </li>
+        <li> Friday: 10 AM - 8 PM </li>
+        <li> Saturday: 10 AM - 8 PM </li>
+    </ul>
+</section>
 <section class="contact">
     <h1> Contact Us </h1>
     <form action="https://formspree.io/f/xldbnzno" method="POST">
@@ -43,15 +55,12 @@ layout: default
 <style>
 
     .map,
+    .hours,
     .contact {
         text-align: center;
         background-color: #9C8B7E;
         margin-bottom: 40px;
-        padding: 10px;
-    }
-
-    .contact {
-        padding-bottom: 2rem;
+        padding: 1rem;
     }
 
     iframe {
@@ -62,6 +71,21 @@ layout: default
         -webkit-user-select: text; /* Safari */
         -ms-user-select: text; /* IE 10 and IE 11 */
         user-select: text; /* Standard syntax */
+    }
+
+    .hours ul {
+        list-style: none;
+        padding: 1rem;
+        margin: 0 auto;
+    }
+
+    .hours li {
+        line-height: 2;
+        text-align: center;
+    }
+
+    .contact {
+        padding-bottom: 2rem;
     }
 
     .contact form {
