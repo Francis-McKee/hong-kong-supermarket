@@ -42,7 +42,6 @@ body {
   
 /* Style the links inside the navigation bar */
 .topnav a {
-    float: center;
     text-align: center;
     font-family: 'Roboto-serif', sans-serif;
     padding: 14px 16px;
