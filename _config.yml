@@ -2,3 +2,10 @@ title: Hong Kong Supermarket
 description: Asian grocery store in Greenville, NC
 baseurl: "" # leave blank unless your site is in a subdirectory
 url: "https://hkmarketgreenvillenc.com"
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
