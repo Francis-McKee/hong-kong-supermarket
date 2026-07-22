@@ -317,8 +317,12 @@ footer .copy {
         margin-bottom: 8px;
         font-size: 20px;
         line-height: 1.25;
-        white-space: normal;
+        white-space: nowrap;
         word-break: normal;
+    }
+
+    nav.responsive .name:hover {
+        font-size: 20px;
     }
   
     nav.responsive a:not(.icon) { /* topnav links NOT including icon after icon pressed */
