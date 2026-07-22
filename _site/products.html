@@ -68,10 +68,11 @@
     <a href="./about.html"> Visit Us </a>
 </nav>
         <main aria-label="Content">
-            <meta name="keywords" content="Asian food, Asian products, Asian grocery, Asian ingredients, products, groceries, ingredients, snacks, sauces">
+          <meta name="keywords" content="Asian food, Asian products, Asian grocery, Asian ingredients, products, groceries, ingredients, snacks, sauces">
 <meta name="description" content="Browse popular Asian grocery items at Hong Kong Supermarket in Winterville, NC — from fresh vegetables to imported snacks and pantry staples.">
 
 <section class="products">
+    <p class="section-eyebrow"> In the aisles </p>
     <h2> Popular Products </h2>
     <div class="product-group">
         <div class="product">
@@ -111,21 +112,35 @@
             <p> Pork & Sweet Corn Dumplings </p>
         </div>
     </div>
-    <h2> And More! </h2>
+    <h2 class="more"> And More! </h2>
 </section>
 
 <style>
 
     .products {
-        padding: 2rem;
-        background-color: #9C8B7E;
+        padding: 3rem 2rem;
         text-align: center;
-        margin-bottom: 40px;
+        margin-bottom: 2px;
+    }
+
+    .section-eyebrow {
+        font-family: var(--font-mono);
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--jade);
+        margin: 0 0 8px;
     }
 
     .products h2 {
-        font-size: 2rem;
+        font-size: 2.4rem;
         margin-bottom: 2rem;
+    }
+
+    .products h2.more {
+        margin-top: 2.5rem;
+        margin-bottom: 0;
     }
 
     .product-group {
@@ -136,8 +151,10 @@
     }
 
     .product {
-        background-color: #555;
-        border-radius: 15px;
+        position: relative;
+        background-color: var(--white);
+        border: 1px solid rgba(35, 31, 26, 0.1);
+        border-radius: 10px;
         padding: 1rem;
         max-width: 370px;
         width: 100%;
@@ -149,16 +166,17 @@
     }
 
     .product img {
-        width: 338px;
+        width: 100%;
         height: 338px;
-        max-width: 100%;
+        max-width: 338px;
         object-fit: cover;
-        border-radius: 15px;
+        border-radius: 6px;
     }
 
     .product p {
-        margin: 0.5rem 0;
-        color: white;
+        margin: 0.75rem 0 0.25rem;
+        color: var(--ink);
+        font-weight: 600;
     }
 
     /* Responsive: 2 columns on medium, 1 on small screens */
@@ -177,6 +195,10 @@
     @media screen and (max-width: 868px) {
         .product-group {
             grid-template-columns: 1fr;
+        }
+
+        .products {
+            padding: 2.5rem 1.25rem;
         }
     }
 
@@ -208,8 +230,8 @@
 
     // Toggle menu on mobile devices
     function toggleMenu() {
-        var topnav = document.querySelector(".topnav");
-        topnav.classList.toggle("responsive");
+      var topnav = document.querySelector("nav");
+      topnav.classList.toggle("responsive");
     }
 
 </script>

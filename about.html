@@ -8,66 +8,122 @@ layout: default
 
 <section class="map">
     <h1> Visit Us </h1>
-    <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3550.673988734067!2d-77.40153435106002!3d35.54553890092228!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89aec342959437a5%3A0xc82fc68ed1592290!2sHong%20Kong%20Supermarket!5e1!3m2!1sen!2sus!4v1746666282808!5m2!1sen!2sus"
-        width="800px"
-        height="450px"
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade"
-    >
-    </iframe>
-    <p> 154 Beacon Drive #A, Winterville, NC 28590 </p>
+    <div class="map-frame">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3550.673988734067!2d-77.40153435106002!3d35.54553890092228!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89aec342959437a5%3A0xc82fc68ed1592290!2sHong%20Kong%20Supermarket!5e1!3m2!1sen!2sus!4v1746666282808!5m2!1sen!2sus"
+            width="800"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
+    </div>
+    <p class="address"> 154 Beacon Drive #A, Winterville, NC 28590 </p>
 </section>
+
 <section class="hours">
     <h2> Store Hours </h2>
-    <ul>
-        <li> Sunday: 10 AM - 7 PM </li>
-        <li> Monday: 10 AM - 7 PM </li>
-        <li> Tuesday: 10 AM - 7 PM </li>
-        <li> Wednesday: 10 AM - 7 PM </li>
-        <li> <strong> Thursday: Closed </strong> </li>
-        <li> Friday: 10 AM - 8 PM </li>
-        <li> Saturday: 10 AM - 8 PM </li>
-    </ul>
+    <div class="hours-board">
+        <ul>
+            <li> <span>Sunday</span> <span class="time">10 AM - 7 PM</span> </li>
+            <li> <span>Monday</span> <span class="time">10 AM - 7 PM</span> </li>
+            <li> <span>Tuesday</span> <span class="time">10 AM - 7 PM</span> </li>
+            <li> <span>Wednesday</span> <span class="time">10 AM - 7 PM</span> </li>
+            <li class="closed"> <span>Thursday</span> <span class="time">Closed</span> </li>
+            <li> <span>Friday</span> <span class="time">10 AM - 8 PM</span> </li>
+            <li> <span>Saturday</span> <span class="time">10 AM - 8 PM</span> </li>
+        </ul>
+    </div>
 </section>
 
 <style>
 
-    .map,
-    .hours,
-    .contact {
+    section {
+        padding: 3rem 2rem;
         text-align: center;
-        background-color: #9C8B7E;
-        margin-bottom: 40px;
-        padding: 1rem;
+        margin-bottom: 2px;
     }
 
-    iframe {
-        padding: 1rem;
+    .map h1 {
+        font-size: 3rem;
+        margin: 0 0 1.5rem;
     }
 
-    .map p {
-        -webkit-user-select: text; /* Safari */
-        -ms-user-select: text; /* IE 10 and IE 11 */
-        user-select: text; /* Standard syntax */
+    .hours h2 {
+        font-size: 2.4rem;
+        margin: 0 0 1.5rem;
     }
 
-    .hours ul {
+    .map-frame {
+        display: inline-block;
+        border: 2px dashed rgba(35, 31, 26, 0.25);
+        padding: 12px;
+        background: var(--white);
+        border-radius: 6px;
+    }
+
+    .map-frame iframe {
+        max-width: 100%;
+        display: block;
+        border-radius: 2px;
+    }
+
+    .address {
+        -webkit-user-select: text;
+        -ms-user-select: text;
+        user-select: text;
+        font-family: var(--font-mono);
+        font-size: 0.9rem;
+        margin-top: 1rem;
+    }
+
+    .hours-board {
+        display: inline-block;
+        background: var(--charcoal);
+        border: 2px solid var(--brass);
+        border-radius: 8px;
+        padding: 1.5rem 2.5rem;
+    }
+
+    .hours-board ul {
         list-style: none;
-        padding: 1rem;
-        margin: 0 auto;
+        padding: 0;
+        margin: 0;
     }
 
-    .hours li {
-        line-height: 2;
-        text-align: center;
+    .hours-board li {
+        display: flex;
+        justify-content: space-between;
+        gap: 3rem;
+        font-family: var(--font-mono);
+        color: var(--paper);
+        padding: 0.5rem 0;
+        border-bottom: 1px dashed rgba(246, 241, 231, 0.15);
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        letter-spacing: 0.04em;
+    }
+
+    .hours-board li:last-child {
+        border-bottom: none;
+    }
+
+    .hours-board li .time {
+        color: var(--brass);
+    }
+
+    .hours-board li.closed .time {
+        color: var(--lacquer);
+        font-weight: 600;
     }
 
     @media screen and (max-width: 868px) {
-        .map iframe {
-            width: 100%;
+
+        section {
+            padding: 2.5rem 1.25rem;
         }
     }
+
 </style>

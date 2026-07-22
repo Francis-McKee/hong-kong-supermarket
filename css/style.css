@@ -1,14 +1,27 @@
 :root {
-    --sand: #D5D2CD;
-    --brown: #9C8B7E;
-    --red: #AC3144;
+    /* Color system: rice-paper market palette */
+    --paper: #F6F1E7;
+    --paper-dim: #ECE3D0;
+    --ink: #231F1A;
+    --lacquer: #B0282E;
+    --lacquer-dark: #8C1F24;
+    --jade: #2F6F52;
+    --brass: #C79A3C;
+    --charcoal: #2A2622;
+    --white: #FFFDF9;
+
+    --font-display: 'Big Shoulders Display', sans-serif;
+    --font-body: 'Work Sans', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
 }
 
 body {
     font-size: 16px;
-    font-family: 'Roboto', sans-serif;/* font-family */
+    font-family: var(--font-body);
+    color: var(--ink);
     box-sizing: border-box; /* contains in parent */
     margin: 0; /* removes default margin */
+    background-color: var(--paper);
 }
   
 * {
@@ -19,14 +32,21 @@ body {
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
 }
+
+h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: var(--ink);
+}
   
 .wrapper {
     width: 100%;
     text-align: left;
     margin-left: auto;
     margin-right: auto;
-    background-color: var(--sand);
-    /* padding: 10px; /* note this adds padding around the footer */
+    background-color: var(--paper);
 }
   
 nav {
@@ -35,10 +55,12 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 15px;
+    padding: 14px 32px;
+    background-color: var(--paper);
+    border-bottom: 2px dashed rgba(35, 31, 26, 0.25);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
   
 /* CSS for hamburger icon */
@@ -49,41 +71,64 @@ nav .icon {
 /* Style the links inside the navigation bar */
 nav a {
     text-align: center;
-    font-family: 'Roboto-serif', sans-serif;
-    padding: 14px 16px;
+    font-family: var(--font-mono);
+    padding: 10px 16px;
     text-decoration: none;
-    font-size: 16px;
-    width: 8em;
-    color: black;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    width: auto;
+    color: var(--ink);
+    border-radius: 3px;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 nav a:first-child {
     float: left;
     width: auto;
-    font-size: 24px;
-    font-weight: bold;
+    font-family: var(--font-display);
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
     white-space: nowrap;
+    color: var(--lacquer);
+    padding-left: 0;
+}
+
+nav a:first-child::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--brass);
+    margin-right: 8px;
+    vertical-align: middle;
 }
   
 nav a:last-child {
     float: right;
-    width: 8em;
-    margin-right: 150px;
+    width: auto;
+    margin-right: 0;
 }
   
 /* Change the color of topnav links on hover */
 nav a:hover {
-    background-color: var(--brown);
-    color: white;
-    font-size: 18px;
+    background-color: var(--ink);
+    color: var(--paper);
+    font-size: 13px;
 }
 
 nav a:first-child:hover {
-    font-size: 24px;
+    background-color: transparent;
+    color: var(--lacquer-dark);
+    font-size: 26px;
 }
 
 main {
-    background-color: var(--sand); /* main background color, doesnt effect wrapper, nav, or footer */
+    background-color: var(--paper); /* main background color, doesnt effect wrapper, nav, or footer */
     margin-left: auto;
 }
   
@@ -91,14 +136,64 @@ main {
     text-align: center;
     align-items: center;
 }
+
+.stamp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    padding: 14px;
+    transform: rotate(-8deg);
+    line-height: 1.3;
+}
+
+.stamp--red {
+    color: var(--lacquer);
+    background: rgba(176, 40, 46, 0.06);
+}
+
+.stamp--jade {
+    color: var(--jade);
+    background: rgba(47, 111, 82, 0.08);
+}
+
+.btn {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background-color: var(--lacquer);
+    color: var(--white);
+    border: none;
+    padding: 14px 28px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: var(--lacquer-dark);
+    transform: translateY(-2px);
+}
   
 /* Footer CSS */
 footer {
     display: block;
     text-align: center;
     align-items: center;
-    background-color: var(--brown);
-    padding: 20px;
+    background-color: var(--charcoal);
+    color: var(--paper);
+    padding: 40px 20px 24px;
 }
 
 footer div {
@@ -109,11 +204,22 @@ footer ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
 }
   
 footer ul li {
     display: inline-block;
-    margin-right: 15px;
+    margin-right: 0;
+}
+
+footer ul li a {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
   
 footer p {
@@ -121,24 +227,39 @@ footer p {
 }
   
 footer a {
-    text-decoration: underline;
-    color: black;
+    text-decoration: none;
+    color: var(--paper);
     transition: color 0.3s; /* Smooth transition for color change */
+    margin-right: 10px;
 }
   
 /* Hover effect */
 footer a:hover {
-    color: var(--sand); /* Change color on hover */
+    color: var(--brass); /* Change color on hover */
 }
   
 footer i {
     margin-right: 10px;
+    color: var(--paper);
+    transition: color 0.3s ease;
+}
+
+footer .icons a:hover i {
+    color: var(--brass); /* Change icon color on hover */
 }
   
 footer .copy {
     display: block;
     text-align: center;
     width: 100%;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px dashed rgba(246, 241, 231, 0.25);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    color: rgba(246, 241, 231, 0.6);
+
 }
   
 @media screen and (max-width: 768px) { /* mobile devices & tablets - screen width <= 768px */
@@ -156,11 +277,16 @@ footer .copy {
       display: block;
       cursor: pointer;
       padding: 14px 16px;
-      color: black;
+      color: var(--ink);
+    }
+
+    nav.responsive {
+        display: block;
     }
   
     nav.responsive a.icon {
-      background-color: var(--brown); /* sets the background color to contrast rest of links so users know its active */
+      background-color: var(--ink); /* sets the background color to contrast rest of links so users know its active */
+      color: var(--paper);
       position: absolute;
       top: 0;
       right: 0;
@@ -170,19 +296,22 @@ footer .copy {
       float: none;
       display: block;
       text-align: left;
+      width: auto;
     }
 
     nav.responsive .name { /* hides name/logo link in topnav menu */
-        display: none;
+        display: block;
+        padding-left: 16px;
+        margin-bottom: 8px;
     }
   
     nav.responsive a:not(.icon) { /* topnav links NOT including icon after icon pressed */
-      width: 70%;
-      text-align: center;
+      width: 100%;
+      text-align: left;
+      padding-left: 16px;
     }
   
     footer .icons { /* Footer icons now stack in a column instead of being smushed together */
-      display: flex;
       flex-direction: column;
       align-items: center;
       margin: 10px;
