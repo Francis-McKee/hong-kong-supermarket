@@ -62,6 +62,7 @@ body {
 .topnav a:last-child {
     float: right;
     width: 8em;
+    margin-right: 150px;
 }
   
 /* Change the color of topnav links on hover */
