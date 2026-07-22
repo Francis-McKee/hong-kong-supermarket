@@ -96,17 +96,6 @@ nav a:first-child {
     color: var(--lacquer);
     padding-left: 0;
 }
-
-nav a:first-child::before {
-    content: "";
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: var(--brass);
-    margin-right: 8px;
-    vertical-align: middle;
-}
   
 nav a:last-child {
     float: right;
@@ -162,6 +151,26 @@ main {
 .stamp--jade {
     color: var(--jade);
     background: rgba(47, 111, 82, 0.08);
+}
+
+/* ---------- MAP ---------- */
+.map-frame {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 2px dashed rgba(35, 31, 26, 0.25);
+    padding: 12px;
+    background: var(--white);
+    border-radius: 6px;
+}
+
+.map-frame iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    display: block;
+    border-radius: 2px;
 }
 
 .btn {
@@ -266,6 +275,7 @@ footer .copy {
 
     nav {
         display: block;
+        width: 100%;
     }
 
     nav a:not(.icon) { /* all topnav links not with class 'icon' (all except hamburger icon) do not display before icon pressed */
@@ -299,10 +309,16 @@ footer .copy {
       width: auto;
     }
 
-    nav.responsive .name { /* hides name/logo link in topnav menu */
+    nav.responsive .name {
         display: block;
+        float: none;
+        width: 100%;
         padding-left: 16px;
         margin-bottom: 8px;
+        font-size: 20px;
+        line-height: 1.25;
+        white-space: normal;
+        word-break: normal;
     }
   
     nav.responsive a:not(.icon) { /* topnav links NOT including icon after icon pressed */
